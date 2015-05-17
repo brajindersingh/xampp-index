@@ -74,13 +74,13 @@ a {
 	
 <div class="header">
 	
-	<a class="google" href="http://google.com/">
+	<a class="google" target="_blank" href="http://google.com/">
 		<div class="util-logo">
 			<img src="http://upload.wikimedia.org/wikipedia/commons/thumb/a/aa/Logo_Google_2013_Official.svg/251px-Logo_Google_2013_Official.svg.png" alt="Google" width="164" />
 		</div>
 	</a>
 		
-	<a class="phpmyadmin" href="http://<?php echo $_SERVER['HTTP_HOST']; ?>/phpmyadmin">
+	<a class="phpmyadmin" target="_blank" href="http://<?php echo $_SERVER['HTTP_HOST']; ?>/phpmyadmin">
 		<div class="util-logo">
 			<img src="https://cp6.awardspace.net/phpMyAdmin/themes/awardspace/img/logo_right.png" alt="PHP-MyAdmin" width="164" height="56" />
 		</div>
