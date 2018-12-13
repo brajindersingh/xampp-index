@@ -3,9 +3,25 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <title>XAMPP</title>
 <script type="text/javascript" src="xampp-js/jquery-1.11.3.min.js"></script>
+<script>
+var random_image_URL = 'https://picsum.photos/1920/1080?random';
+$.ajax({
+	url: random_image_URL, 
+	success: function(result){
+		$('body').css('background-image', 'url(' + random_image_URL + ')');
+		console.log(random_image_URL);
+	},
+	error: function(xhr){
+	  $('body').css('background-image', 'url("img/Batman.jpg")');
+      console.log("An error occured: " + xhr.status + " " + xhr.statusText);
+	}  
+});
+//background-image:url('img/Batman.jpg');
+
+</script>
 <style>
 body {
-	background-image:url('img/Batman.jpg');
+	
 	background-attachment: fixed;
 	background-repeat: no-repeat;
 	background-size: cover;
@@ -50,11 +66,10 @@ a {
 }
 .dir-list {
 	display:inline-block;
+	width:100%;
 }
 .a_link {
 	display:inline-block;
-	min-width:20%;
-	height:30px;
 	background-color:#E3E3E3;
 	border:1px solid #eee;
 	border-radius:20px;
@@ -62,7 +77,13 @@ a {
 	font-size:130%;
 	text-align:center;
 	color: #D63333;
+	height:auto;
+	width:20%;
+	max-width: 150px !important;
+    word-break: break-word;
+    white-space: normal;
 }
+
 </style>
 </head>
 <body>
@@ -82,7 +103,7 @@ a {
 		
 	<a class="phpmyadmin" target="_blank" href="http://<?php echo $_SERVER['HTTP_HOST']; ?>/phpmyadmin">
 		<div class="util-logo">
-			<img src="https://cp6.awardspace.net/phpMyAdmin/themes/awardspace/img/logo_right.png" alt="PHP-MyAdmin" width="164" height="56" />
+			<img src="https://www.phpmyadmin.net/static/images/logo.png" alt="PHP-MyAdmin" width="164" height="56" />
 		</div>
 	</a>
 	
